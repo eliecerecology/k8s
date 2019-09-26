@@ -8,5 +8,4 @@ spec:
   containers:
   - name: demo
     image: mandelbrot79/demo:version1
-    ports:
-    - containerPort: 8000
+    
