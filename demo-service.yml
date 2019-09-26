@@ -4,14 +4,11 @@ metadata:
   name: demo-service
 
 spec:
-  # This defines which pods are going to be represented by this Service
-  # The service becomes a network endpoint for either other services
-  # or maybe external users to connect to (eg browser)
-  selector:
-    mylabelname: virtualization
+  type: LoadBalancer
   ports:
-    - name: http
-      port: 80
-      nodePort: 30100
-  type: NodePort
+  - port: 80
+    targetPort: 80
+  selector:
+    name: pod
+    app: demo
     
