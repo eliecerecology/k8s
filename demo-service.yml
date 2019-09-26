@@ -4,10 +4,11 @@ metadata:
   name: demo-service
 
 spec:
-  type: LoadBalancer
+  type: NodePort #LoadBalancer
   ports:
-  - port: 8000
-    targetPort: 8000
+  - targetport: 8000
+    Port: 8000
+    nodePort: 32000
   selector:
     name: pod
     app: demo
