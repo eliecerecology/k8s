@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo
+  labels: 
+    mylabelname: virtualization
+spec:
+  containers:
+  - name: demo
+    image: mandelbrot79/demo:version1
+    ports:
+    - containerPort: 8000
